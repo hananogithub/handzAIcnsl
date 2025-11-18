@@ -41,10 +41,34 @@ body {
     height: 70px;
 }
 
-.logo h1 {
-    color: #1e3a8a;
-    font-size: 1.8rem;
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 0.75rem;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.logo-image:hover {
+    opacity: 0.8;
+}
+
+.logo-text {
+    color: #000000;
+    font-size: 1.5rem;
     font-weight: 700;
+    white-space: nowrap;
 }
 
 .nav-menu {
@@ -1030,15 +1054,39 @@ body {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem 0.8rem;
     margin-bottom: 2rem;
+}
+
+.footer-content > .footer-section:first-child {
+    padding-right: 2.5rem;
 }
 
 .footer-section h3,
 .footer-section h4 {
     margin-bottom: 1rem;
     color: #fbbf24;
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-logo-text {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    white-space: nowrap;
 }
 
 .footer-description {
@@ -1101,6 +1149,14 @@ body {
 
     .nav-menu li {
         margin: 1rem 0;
+    }
+
+    .logo-image {
+        height: 40px;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
     }
 
     .hamburger.active span:nth-child(2) {
@@ -1167,6 +1223,14 @@ body {
 
     .faq-question h3 {
         font-size: 1rem;
+    }
+
+    .footer-logo {
+        height: 50px;
+    }
+
+    .footer-logo-text {
+        font-size: 1.2rem;
     }
 }
 
