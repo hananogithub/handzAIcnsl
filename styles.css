@@ -1126,6 +1126,10 @@ body {
 
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
     .hamburger {
         display: flex;
     }
@@ -1141,6 +1145,7 @@ body {
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
+        gap: 0;
     }
 
     .nav-menu.active {
@@ -1148,7 +1153,13 @@ body {
     }
 
     .nav-menu li {
-        margin: 1rem 0;
+        margin: 0.5rem 0;
+    }
+
+    .nav-menu a {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+        display: block;
     }
 
     .logo-image {
@@ -1156,7 +1167,7 @@ body {
     }
 
     .logo-text {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .hamburger.active span:nth-child(2) {
@@ -1171,58 +1182,460 @@ body {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    /* ヒーローセクション */
+    .hero {
+        min-height: auto;
+        padding: 100px 0 60px;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 2rem;
+        gap: 2.5rem;
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+
+    .hero-description br {
+        display: none;
     }
 
     .hero-buttons {
         justify-content: center;
+        flex-direction: column;
+        gap: 0.75rem;
     }
 
+    .btn {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px 24px;
+        font-size: 0.95rem;
+        min-width: auto;
+    }
+
+    .hero-graphic {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .hero-graphic i {
+        font-size: 4rem;
+    }
+
+    .element {
+        width: 50px;
+        height: 50px;
+    }
+
+    .element i {
+        font-size: 1.2rem;
+    }
+
+    /* セクション共通 */
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .problems,
+    .services,
+    .before-after,
+    .differentiation,
+    .cases,
+    .service-details,
+    .testimonials,
+    .faq,
+    .plans,
+    .cta,
+    .contact {
+        padding: 3rem 0;
+    }
+
+    /* 課題提示セクション */
+    .problems-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .problem-item {
+        padding: 1.5rem;
+    }
+
+    .problem-item p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .problem-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+
+    .problem-icon i {
+        font-size: 1.2rem;
+    }
+
+    /* サービスセクション */
+    .services-steps {
+        gap: 1.5rem;
+    }
+
+    .step {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .step:hover {
+        transform: translateY(-5px);
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+
+    .step-content h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .step-content p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* Before → After セクション */
     .comparison {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
+    }
+
+    .before,
+    .after {
+        padding: 1.5rem;
+    }
+
+    .before h3,
+    .after h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
     }
 
     .arrow {
-        transform: rotate(90deg);
+        display: none;
     }
 
-    .profile-content {
-        grid-template-columns: 1fr;
-        text-align: center;
+    .comparison-items {
+        gap: 1rem;
     }
 
-    .contact-content {
+    .comparison-item {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .roi-text {
+        font-size: 1.2rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* 差別化セクション */
+    .diff-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .diff-item {
+        padding: 1.5rem;
+    }
+
+    .diff-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+
+    .diff-icon i {
+        font-size: 1.5rem;
+    }
+
+    .diff-item h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .diff-item p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* 導入事例セクション */
+    .cases-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .case-item {
+        padding: 1.5rem;
+    }
+
+    .case-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+
+    .case-icon i {
+        font-size: 1.5rem;
+    }
+
+    .case-item h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .case-result {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .case-detail {
+        font-size: 0.9rem;
+    }
+
+    /* サービス詳細セクション */
+    .service-details-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-detail-item {
+        padding: 1.5rem;
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+
+    .service-icon i {
+        font-size: 1.5rem;
+    }
+
+    .service-detail-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .service-detail-item p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-features li {
+        font-size: 0.85rem;
+        padding: 0.4rem 0;
+    }
+
+    /* お客様の声セクション */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .testimonial-item {
+        padding: 1.5rem;
+    }
+
+    .testimonial-item::before {
+        font-size: 3rem;
+        top: 0.5rem;
+        left: 1rem;
+    }
+
+    .testimonial-content {
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .testimonial-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .testimonial-author {
+        padding-left: 1.5rem;
+    }
+
+    .author-info h4 {
+        font-size: 1rem;
+    }
+
+    .author-info p {
+        font-size: 0.85rem;
+    }
+
+    /* よくある質問セクション */
+    .faq-list {
+        max-width: 100%;
+    }
+
+    .faq-question {
+        padding: 1rem;
+    }
+
+    .faq-question h3 {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 1rem;
+        max-height: 500px;
+    }
+
+    .faq-answer p {
+        font-size: 0.9rem;
+    }
+
+    /* プラン・料金セクション */
+    .plans-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .plan-item {
+        padding: 1.5rem;
+    }
+
+    .plan-item h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .plan-price {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .plan-description {
+        font-size: 0.9rem;
+    }
+
+    .roi-message {
+        font-size: 1rem;
+        padding: 0.75rem 0;
+    }
+
+    /* CTAセクション */
+    .cta-title {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+
+    .cta-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+
+    .cta-description br {
+        display: none;
     }
 
     .cta-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 0.75rem;
     }
 
-    .btn {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .service-details-grid {
+    /* お問い合わせセクション */
+    .contact-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
     }
 
-    .testimonials-grid {
+    .contact-info {
+        gap: 1.5rem;
+    }
+
+    .contact-item {
+        padding: 1.25rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .contact-item i {
+        font-size: 1.3rem;
+    }
+
+    .contact-item h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .contact-item p {
+        font-size: 0.9rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.25rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 14px;
+        font-size: 0.95rem;
+    }
+
+    /* フッター */
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+
+    .footer-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
     }
 
-    .faq-question h3 {
-        font-size: 1rem;
+    .footer-content > .footer-section:first-child {
+        padding-right: 0;
+    }
+
+    .footer-logo-container {
+        justify-content: center;
     }
 
     .footer-logo {
@@ -1232,33 +1645,98 @@ body {
     .footer-logo-text {
         font-size: 1.2rem;
     }
+
+    .footer-section h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .footer-description p {
+        font-size: 0.85rem;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 0.4rem;
+    }
+
+    .footer-section ul li a {
+        font-size: 0.9rem;
+    }
+
+    .footer-bottom {
+        padding-top: 1.5rem;
+        font-size: 0.85rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .hero {
+        padding: 90px 0 50px;
+    }
+
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .hero-graphic {
-        width: 250px;
-        height: 250px;
+        width: 180px;
+        height: 180px;
     }
 
     .hero-graphic i {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
-    .profile-photo {
-        width: 150px;
-        height: 150px;
+    .element {
+        width: 45px;
+        height: 45px;
     }
 
-    .profile-photo i {
-        font-size: 4rem;
+    .element i {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .problems,
+    .services,
+    .before-after,
+    .differentiation,
+    .cases,
+    .service-details,
+    .testimonials,
+    .faq,
+    .plans,
+    .cta,
+    .contact {
+        padding: 2.5rem 0;
+    }
+
+    .cta-title {
+        font-size: 1.5rem;
+    }
+
+    .cta-description {
+        font-size: 0.95rem;
     }
 }
 
